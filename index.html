@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Rate Your Professor</title>
+
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Rate Your Professor </span>
+            </div>
+        </nav>
+    </div>
+    
+
+        <div class="container">
+            <form action="/add" method="POST">
+                
+                <h5>Please Provide the Following Information:</h5>
+                <div class="d-flex">
+                    <input type="text" class="form-control" placeholder="Professor ID" name="Professor_ID">
+                    <input type="number" class="form-control" placeholder="Difficulty(between 0-5)" name="Difficulty">
+                    <input type="Number" class="form-control" placeholder="Quality(between 0-5)" name="Quality">
+                </div>
+                <br>
+                <h5>Please write your review: </h5>
+                <input type="text" class="form-control" placeholder="Review" name="review">
+                <br />
+                <button type="submit" class="btn btn-success">Add my Review</button>
+            </form>
+
+        </div>
+        <hr />
+        
+
+
+        <div class="container">
+            <h5>Please Provide the Professor ID</h5>
+            <form action="/search" method="POST">
+                <input required type="text" class="form-control" placeholder="Professor ID " name="professor_id">
+                <br />
+                <button required type="submit" class="btn btn-primary">Find All Reviews for this Professor</button>
+            </form>
+            <hr />
+        </div>
+
+        <div class="container">
+            <h5>Please Provide the Professor ID</h5>
+            <form action="/overall" method="POST">
+                <input required type="text" class="form-control" placeholder="Professor ID " name="professor_id">
+                <br />
+                <button required type="submit" class="btn btn-primary">Find Overall Review for this Professor</button>
+            </form>
+            <hr />
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script>
+
+
+</script>
+
+</html>
