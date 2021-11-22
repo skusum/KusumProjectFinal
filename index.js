@@ -7,6 +7,7 @@ const path = require("path");
 const sentiment = require('sentiment');
 const { kMaxLength } = require("buffer");
 const Sentimentobj = new sentiment();
+const port = process.env.PORT || 8000;
 ///MOngog DB Connection
 var mongoDB =
   // "mongodb+srv://Requin:Requin@cluster0.0vcok.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -93,6 +94,6 @@ app.post("/overall", (req, res) => {
     .catch((error) => console.error(error));
 });
 
-app.listen(8080, function () {
-  console.log("listening on 8080");
+app.listen(port, () => {
+  console.log('listening to the port at ${port}')
 });
